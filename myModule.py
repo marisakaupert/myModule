@@ -1,6 +1,10 @@
 
 
-"""this is myModule where I put my code. """
+"""
+import myModule
+reload(myModule)
+myModule.run()
+"""
 
 import logging
 from collections import Counter
