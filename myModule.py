@@ -38,7 +38,7 @@ def run():
     """  builds our UI
     """
     global win
-    win = Homework(parent=getMayaWindow())
+    win = GeometryGenerator(parent=getMayaWindow())
     win.show()
 
 def stopwatch(func):
@@ -63,11 +63,11 @@ def stopwatch(func):
 
 
 
-class Homework(QtGui.QDialog):
+class GeometryGenerator(QtGui.QDialog):
     """ This is the main class of this module """
 
     def __init__(self, parent=None):
-        super(Homework,self).__init__(parent)
+        super(GeometryGenerator,self).__init__(parent)
 
         self.greetingType = 'Hello!'
 
@@ -146,7 +146,7 @@ class Homework(QtGui.QDialog):
         self.mostCommonWordsHorizontalLayout.addWidget(self.browserPushButton)
         self.overallVerticalLayout.addLayout(self.mostCommonWordsHorizontalLayout)
 
-        #many things you have to add
+        # many things you have to add
         self.makeConnections()
         self.setWindowTitle("Geometry Generator")
         self.setLayout(self.overallVerticalLayout)
@@ -191,6 +191,7 @@ class Homework(QtGui.QDialog):
         self.helloRadioButton.toggle()
         self.customGreeetingLineEdit.setEnabled(False)
         self.customGreeetingLineEdit.setPlaceholderText("Custom Greeting Here")
+        
 
     def findTextFile(self):
         """ Browse to find a file """
